@@ -1,258 +1,120 @@
-!!!
-%html
-  %body
-    %p
-      here
-    %title Dan Stutzman resume
-    %link{href: "http://fonts.googleapis.com/css?family=PT+Sans", rel: "stylesheet", type: "text/css"}/
-    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700", rel: "stylesheet", type: "text/css"}/
-    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:300,800", rel: "stylesheet", type: "text/css"}/
-    :css
-      .effect8
-      {
-          position:relative;       
-          -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-             -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-                  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-      }
-      .effect8:before, .effect8:after
-      {
-        content:"";
-          position:absolute; 
-          z-index:-1;
-          -webkit-box-shadow:0 0 20px rgba(0,0,0,0.5);
-          -moz-box-shadow:0 0 20px rgba(0,0,0,0.5);
-          box-shadow:0 0 20px 10px rgba(0,0,0,0.5);
-          top:15px;
-          bottom:12px;
-          left:10px;
-          right:5px;
-          -moz-border-radius:100px;
-          border-radius:5px / 100px;
-      } 
-      .effect8
-      {
-        right:10px; 
-          left:auto;
-          -webkit-transform:rotate(3deg); 
-             -moz-transform:rotate(3deg);     
-              -ms-transform:rotate(3deg);     
-               -o-transform:rotate(3deg); 
-                  transform:rotate(3deg);
-      }  
-      
-            html {
-              padding: 0;
-            }
-            body {
-              margin: 0;
-              font-family: 'Open Sans', sans-serif;
-            }
-            .top {
-              font-size: 33pt;
-              letter-spacing: 10px;
-              font-weight: 300;
-            }
-            .content {
-              font-family: 'Open Sans Condensed', 'Arial Narow', sans-serif;
-              font-size: 14pt;
-            }
-            h1 {
-              font-size: 24pt;
-              font-weight: normal;
-              margin: 0;
-              line-height: 1.0;
-            }
-            .subtitle {
-              font-style: italic;
-              padding-top: 10px;
-            }
-            @media (max-width:749px) {
-              .contact-info {
-                margin-top: 10px;
-                text-align: right;
-              }
-            }
-            @media (min-width:750px) {
-              .restricted-width {
-                width: 600px;
-                margin: 0 auto;
-              }
-              .title {
-                float: left;
-                width: 400px;
-              }
-              .contact-info {
-                float: right;
-                width: 200px;
-                text-align: right;
-              }
-              h2 {
-                width: 100px;
-                float: left;
-                font-weight: normal;
-                font-size: 14pt;
-                padding-top: 30px;
-                margin-top: 0;
-              }
-              .right {
-                padding-top: 30px;
-              }
-            }
-            h2 {
-              margin-bottom: 0;
-            }
-            @media (min-width:750px) {
-              .right {
-                margin-left: 100px;
-              }
-            }
-            .right p {
-              margin: 0;
-            }
-            .right a {
-              font-weight: bold;
-            }
-            ul {
-              margin-top: 0;
-              margin-bottom: 0;
-              padding-left: 20px;
-            }
-            li {
-            }
-            a {
-              text-decoration: none;
-              color: #008;
-            }
-            .entry {
-              padding-bottom: 20px;
-            }
-      a.other {
-      opacity: 0.3;
-      }
-      @media (min-width:750px) {
-        .float-left-if-enough-space {
-          float:left;
-        }
-        .float-right-if-enough-space {
-          float:right;
-        }
-      }
-    .header
-      %div{style: "width:100%; height: 60px; padding: 5px 0; background-color: black; color:white"}
-        .restricted-width
-          .top.float-left-if-enough-space
-            Dan Stutzman
-          .float-right-if-enough-space
-            %img{height: "40", src: "social-media-icons.png"}/
-    :css
-      .nav-background {
-      background-color: #060;
-      box-shadow: 0px 3px 2px rgba(0, 0, 0, 1.0);
-      margin-bottom: 1px;
-      height: 30px;
-      width: 100%;
-      padding: 5px 0;
-      line-height: 1.2;
-        }
-      .nav-links a {
-        background-color: #000;
-        color: transparent;
-        text-shadow: 0px -1px 1px rgba(255,255,255,1.0);
-        -webkit-background-clip: text;
-           -moz-background-clip: text;
-                background-clip: text;
-        height: 35px;
-        letter-spacing: 5px;
-        padding-left: 50px;
-        font-size: 20pt;
-        font-weight: 800;
-      }
-    %a{name: "about"}
-      .nav-background
-        .nav-links
-          %a{href: "#about"} about
-          %a.other{href: "#contact"} contact
-    content in between
-    %a{name: "contact"}
-      .nav-background
-        .nav-links
-          %a.other{href: "#"} about
-          %a{href: "#"} contact
+- @title = 'Dan Stutzman'
+
+.header
+  %div{style: "width:100%; height: 60px; padding: 5px 0; background-color: black; color:white"}
     .restricted-width
-      .content
-        .effect8{style: "background:#FFF; width: 180px; left: 50px"}
-          %img{src: "http://www.danielstutzman.com/images/2012-dec-professional-180.jpg"}/
-        %div{style: "clear: both"}
-        .title
-          %h1 Dan Stutzman, dev-ops freelancer
-          .subtitle
-            integration — deployment — monitoring
-        .contact-info
-          %a{href: "tel:7204323194"} 720-432-3194
-          %br/
-          %a{href: "mailto:dan@danstutzman.com"} dan@danstutzman.com
-          %br/
-          %a{href: "http://www.danstutzman.com"} www.danstutzman.com
-        %div{style: "clear: both"}
-        %h2 Seeking
-        .right
-          Short-term or part-time projects with Ruby/JS stack
-          deployed to cloud
-        %div{style: "clear: both"}
-        %h2 Technologies
-        .right
-          %ul
-            %li
-              Languages:
-              Bash, Java, JavaScript, Obj. C, Perl, PHP, Python, Ruby
-            %li
-              Databases:
-              MongoDB, MySQL, Oracle, PostgreSQL, SQL Server, SQLite
-            %li Other: Amazon EC2, Ant, Cruise Control, make, Nagios
-        %div{style: "clear: both"}
-        %h2 Experience
-        .right
-          .entry
-            2013
-            %a{href: "http://www.davincicoders.com"} DaVinci Coders
-            in Louisville, CO
-            %br/
-            %ul
-              %li
-                Taught Web development with Ruby on Rails to beginners
-          .entry
-            2012
-            %a{href: "http://www.quickleft.com"} Quick Left
-            in Boulder, CO
-            %br/
-            %ul
-              %li
-                Helped develop and administer client Rails apps
-          .entry
-            2011
-            = succeed "," do
-              %a{href: "http://kidzout.com"} KIDzOUT
-            %br/
-            %ul
-              %li
-                Developed geolocation iPhone app with PHP back-end
-          .entry
-            2007-2011
-            %a{href: "http://www.rosettastone.com"} Rosetta Stone
-            in Boulder, CO
-            %br/
-            %ul
-              %li
-                Developed Rails apps to handle large collections of audio files
-          .entry
-            2003-2007
-            %a{href: "http://www.rosettastone.com"} Rosetta Stone
-            in Harrisonburg, VA
-            %br/
-            %ul
-              %li
-                Developed Rails e-commerce back-end that syncs to Oracle ERP
+      .top.float-left-if-enough-space
+        Dan Stutzman
+      .float-right-if-enough-space
+        %img{height: "40", src: "social-media-icons.png"}/
+:css
+  .nav-background {
+  background-color: #060;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 1.0);
+  margin-bottom: 1px;
+  height: 30px;
+  width: 100%;
+  padding: 5px 0;
+  line-height: 1.2;
+    }
+  .nav-links a {
+    background-color: #000;
+    color: transparent;
+    text-shadow: 0px -1px 1px rgba(255,255,255,1.0);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+    height: 35px;
+    letter-spacing: 5px;
+    padding-left: 50px;
+    font-size: 20pt;
+    font-weight: 800;
+  }
+%a{name: "about"}
+  .nav-background
+    .nav-links
+      %a{href: "#about"} about
+      %a.other{href: "#contact"} contact
+content in between
+%a{name: "contact"}
+  .nav-background
+    .nav-links
+      %a.other{href: "#"} about
+      %a{href: "#"} contact
+.restricted-width
+  .content
+    .effect8{style: "background:#FFF; width: 180px; left: 50px"}
+      %img{src: "http://www.danielstutzman.com/images/2012-dec-professional-180.jpg"}/
+    %div{style: "clear: both"}
+    .title
+      %h1 Dan Stutzman, dev-ops freelancer
+      .subtitle
+        integration — deployment — monitoring
+    .contact-info
+      %a{href: "tel:7204323194"} 720-432-3194
+      %br/
+      %a{href: "mailto:dan@danstutzman.com"} dan@danstutzman.com
+      %br/
+      %a{href: "http://www.danstutzman.com"} www.danstutzman.com
+    %div{style: "clear: both"}
+    %h2 Seeking
+    .right
+      Short-term or part-time projects with Ruby/JS stack
+      deployed to cloud
+    %div{style: "clear: both"}
+    %h2 Technologies
+    .right
+      %ul
+        %li
+          Languages:
+          Bash, Java, JavaScript, Obj. C, Perl, PHP, Python, Ruby
+        %li
+          Databases:
+          MongoDB, MySQL, Oracle, PostgreSQL, SQL Server, SQLite
+        %li Other: Amazon EC2, Ant, Cruise Control, make, Nagios
+    %div{style: "clear: both"}
+    %h2 Experience
+    .right
+      .entry
+        2013
+        %a{href: "http://www.davincicoders.com"} DaVinci Coders
+        in Louisville, CO
+        %br/
+        %ul
+          %li
+            Taught Web development with Ruby on Rails to beginners
+      .entry
+        2012
+        %a{href: "http://www.quickleft.com"} Quick Left
+        in Boulder, CO
+        %br/
+        %ul
+          %li
+            Helped develop and administer client Rails apps
+      .entry
+        2011
+        = succeed "," do
+          %a{href: "http://kidzout.com"} KIDzOUT
+        %br/
+        %ul
+          %li
+            Developed geolocation iPhone app with PHP back-end
+      .entry
+        2007-2011
+        %a{href: "http://www.rosettastone.com"} Rosetta Stone
+        in Boulder, CO
+        %br/
+        %ul
+          %li
+            Developed Rails apps to handle large collections of audio files
+      .entry
+        2003-2007
+        %a{href: "http://www.rosettastone.com"} Rosetta Stone
+        in Harrisonburg, VA
+        %br/
+        %ul
+          %li
+            Developed Rails e-commerce back-end that syncs to Oracle ERP
         %div{style: "clear: both"}
         %h2 Education
         .right
