@@ -13,6 +13,9 @@ end
 require 'serve'
 require 'serve/rack'
 
+require 'haml'
+Haml::Options.defaults[:ugly] = true
+
 # The project root directory
 root = ::File.dirname(__FILE__)
 
