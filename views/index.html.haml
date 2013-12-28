@@ -1,87 +1,16 @@
 - @title = 'Dan Stutzman'
 
-.effect8{style: "background:#FFF; width: 180px; left: 50px"}
-  %img{src: "http://www.danielstutzman.com/images/2012-dec-professional-180.jpg"}/
-%div{style: "clear: both"}
-.title
-  %h1 Dan Stutzman, dev-ops freelancer
-  .subtitle
-    integration — deployment — monitoring
-.contact-info
-  %a{href: "tel:7204323194"} 720-432-3194
-  %br/
-  %a{href: "mailto:dan@danstutzman.com"} dan@danstutzman.com
-  %br/
-  %a{href: "http://www.danstutzman.com"} www.danstutzman.com
-%div{style: "clear: both"}
-%h2 Seeking
-.right
-  Short-term or part-time projects with Ruby/JS stack
-  deployed to cloud
-%div{style: "clear: both"}
-%h2 Technologies
-.right
-  %ul
-    %li
-      Languages:
-      Bash, Java, JavaScript, Obj. C, Perl, PHP, Python, Ruby
-    %li
-      Databases:
-      MongoDB, MySQL, Oracle, PostgreSQL, SQL Server, SQLite
-    %li Other: Amazon EC2, Ant, Cruise Control, make, Nagios
-%div{style: "clear: both"}
+= render 'h2', locals: { name: 'services' }
+.restricted-width
+  .content
+    = render 'services'
 
-%h2 Experience
-.right
-  .entry
-    2013
-    %a{href: "http://www.davincicoders.com"} DaVinci Coders
-    in Louisville, CO
-    %br/
-    %ul
-      %li
-        Taught Web development with Ruby on Rails to beginners
-  .entry
-    2012
-    %a{href: "http://www.quickleft.com"} Quick Left
-    in Boulder, CO
-    %br/
-    %ul
-      %li
-        Helped develop and administer client Rails apps
-  .entry
-    2011
-    = succeed "," do
-      %a{href: "http://kidzout.com"} KIDzOUT
-    %br/
-    %ul
-      %li
-        Developed geolocation iPhone app with PHP back-end
-  .entry
-    2007-2011
-    %a{href: "http://www.rosettastone.com"} Rosetta Stone
-    in Boulder, CO
-    %br/
-    %ul
-      %li
-        Developed Rails apps to handle large collections of audio files
-  .entry
-    2003-2007
-    %a{href: "http://www.rosettastone.com"} Rosetta Stone
-    in Harrisonburg, VA
-    %br/
-    %ul
-      %li
-        Developed Rails e-commerce back-end that syncs to Oracle ERP
+= render 'h2', locals: { name: 'resume' }
+.restricted-width
+  .content
+    = render 'resume'
 
-%div{style: "clear: both"}
-%h2 Education
-.right
-  .entry
-    2010 M.S. in Computer Science from
-    %a{href: "http://www.colorado.edu"} U. of Colorado at Boulder
-  .entry
-    2003 B.A. in Music from
-    %a{href: "http://www.emu.edu"} Eastern Mennonite U.
-    in Harrisonburg, VA
-    %div{style: "clear: both"}
+= render 'h2', locals: { name: 'contact' }
+.restricted-width
+  .content
+    = render 'contact'

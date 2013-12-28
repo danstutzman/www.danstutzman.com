@@ -1,0 +1,10 @@
+.nav-background
+  .restricted-width
+    .nav-links
+      - %w[services resume contact].each do |page|
+        - if name == page
+          %a{name: name, href: "##{page}"}
+            = page
+        - else
+          %a.other{href: "##{page}"}
+            = page
