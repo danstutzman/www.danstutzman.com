@@ -15,9 +15,17 @@
     .header
       .top-bar
         .restricted-width
+          .social
+            %a.facebook(href='http://www.facebook.com/dtstutz')
+            %a.github(href='https://github.com/danielstutzman')
+            %a.googleplus(href='https://plus.google.com/112826277336975923063')
+            %a.linkedin(href='http://www.linkedin.com/pub/daniel-stutzman/9/15b/140')
+            %a.twitter(href='http://twitter.com/#!/danielstutzman')
+            %a.email(href='mailto:dan@danstutzman.com')
           .top
             Dan&nbsp;Stutzman
-        .top-bar-cover
+            .top-cover
+
 
     - if request.path_info == '/' || request.path_info == '/index.html.haml'
       = yield
