@@ -17,7 +17,7 @@
             Dan&nbsp;Stutzman
         .top-bar-cover
 
-    - if request.path_info == '/'
+    - if request.path_info == '/' || request.path_info == '/index.html.haml'
       = yield
     - else # blog post
       .restricted-width
