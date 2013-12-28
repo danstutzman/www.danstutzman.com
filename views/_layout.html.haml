@@ -10,13 +10,6 @@
     %link(href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css")
   %body(onload='zoom()')
 
-    :javascript
-      function zoom() {
-        if (self.innerWidth && self.innerWidth > 1000) {
-          document.body.style.zoom = "150%"
-        }
-      }
-
     .header
       .top-bar
         .restricted-width
@@ -33,3 +26,10 @@
           %br
           %i Published #{@date}
           = yield
+
+    :javascript
+      function zoom() {
+        if (self.innerWidth && self.innerWidth > 1000) {
+          document.body.style.zoom = "150%";
+        }
+      }
