@@ -3,8 +3,9 @@
     .nav-links
       - %w[services resume contact].each do |page|
         - if name == page
-          %a{name: name, href: "##{page}"}
-            = page
+          %h2
+            %a{name: name, href: "##{page}"}
+              = page
         - else
           %a.other{href: "##{page}"}
             = page
