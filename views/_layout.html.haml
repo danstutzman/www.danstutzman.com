@@ -24,4 +24,12 @@
             Dan&nbsp;Stutzman
         .top-bar-cover
 
-    = yield
+    - if request.path_info == '/'
+      = yield
+    - else # blog post
+      .restricted-width
+        .content
+          %h2= @title
+          %br
+          %i Published #{@date}
+          = yield

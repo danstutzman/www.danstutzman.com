@@ -4,14 +4,14 @@
     = render 'services'
 %br(clear='all')
 
+= render 'h2', locals: { name: 'blog' }
+.restricted-width
+  .content
+    = render 'blog'
+%br(clear='all')
+
 = render 'h2', locals: { name: 'resume' }
 .restricted-width
   .content
     = render 'resume'
-%br(clear='all')
-
-= render 'h2', locals: { name: 'contact' }
-.restricted-width
-  .content
-    = render 'contact'
 %br(clear='all')

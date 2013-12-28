@@ -19,7 +19,9 @@ module ViewHelpers
   def hidden(&block)
     #no-op
   end
-  
-  # Add your own helpers below...
+
+  def get_binding
+    binding
+  end
   
 end
