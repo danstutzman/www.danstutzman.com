@@ -1,7 +1,7 @@
 .nav-background
   .restricted-width
     .nav-links
-      - %w[services resume contact].each do |page|
+      - %w[services blog resume].each do |page|
         - if name == page
           %h2
             %a{name: name, href: "##{page}"}
