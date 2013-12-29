@@ -2,13 +2,13 @@
 %html(lang="en")
   %head
     %meta(charset="utf-8")
-    %meta(name="viewport" content="width=device-width")
+    %meta(name="viewport" content="width=450")
     %title Dan Stutzman
     %link(rel="stylesheet" href="/stylesheets/index.css")
     %link(href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css")
     %link(href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css")
     %link(href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css")
-  %body(onload='zoom()')
+  %body
     %h1(style='background-color:red')
       Don't forget to re-enable robots.txt
 
@@ -36,10 +36,3 @@
           %br
           %i Published #{@date}
           = yield
-
-    :javascript
-      function zoom() {
-        if (self.innerWidth && self.innerWidth > 1000) {
-          document.body.style.zoom = "150%";
-        }
-      }
