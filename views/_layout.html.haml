@@ -40,7 +40,7 @@
         .restricted-width
           .nav-links
             - %w[services blog resume].each do |page|
-              - if request.path_info == "/#{page}"
+              - if request.path_info.gsub(/\.html.haml$/, '') == "/#{page}"
                 %h2
                   %a{href: "/#{page}"}
                     = page
