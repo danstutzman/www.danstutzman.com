@@ -27,12 +27,26 @@
             .top-cover
 
 
-    - if request.path_info == '/' || request.path_info == '/index.html.haml'
-      = yield
-    - else # blog post
+    - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
       .restricted-width
         .content
           %h2= @title
           %br
           %i Published #{@date}
+          = yield
+
+    - else
+      .nav-background
+        .restricted-width
+          .nav-links
+            - %w[services blog resume].each do |page|
+              - if request.path_info == "/#{page}"
+                %h2
+                  %a{href: "/#{page}"}
+                    = page
+              - else
+                %a.other{href: "/#{page}"}
+                  = page
+      .restricted-width
+        .content
           = yield
