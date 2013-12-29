@@ -1,16 +1,15 @@
 - last_path = Dir.glob('**/*.html.erb').max
 - result = ERB.new(File.read(last_path)).result(get_binding)
-%h3= "Latest post: #{@title}"
+%h3= @title
 %i Published #{@date}
 = result
 
-%h3 Archive
-%div(style='position:relative')
-  %div.blog-archive-scroller
-    %ul
-      - Dir.glob('**/*.html.erb').sort.reverse.each do |path|
-        - ERB.new(File.read(path)).result(get_binding) # ignore it
-        %li
-          %a{href: path.gsub(/^views/, '').gsub(/.html.erb$/, '')}
-            = @title
-  %div.gradient-to-suggest-scrolling
+%ul
+  - Dir.glob('views/20*').sort.reverse.each do |dir|
+    - year = dir.split('/')[1]
+    %h3 Posts from #{year}
+    - Dir.glob("views/#{year}/**/*.html.erb").sort.reverse.each do |path|
+      - ERB.new(File.read(path)).result(get_binding) # ignore it
+      %li
+        %a{href: path.gsub(/^views/, '').gsub(/.html.erb$/, '')}
+          = @title
