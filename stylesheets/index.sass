@@ -3,7 +3,7 @@ html
 
 body
   margin: 0
-  font: 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif
+  font: 14px Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, 'Liberation Sans', FreeSans, sans-serif
   background-color: #fefefe
 
 @font-face
@@ -12,7 +12,7 @@ body
 
 hr.nav-line
   width: 670px
-  height: 2pt
+  height: 2px
   background-color: black
   position: relative
   top: 20px
@@ -34,33 +34,36 @@ hr.nav-line
   top: 0
 
 h1
-  font-family: GraublauWebBold
+  font-family: GraublauWebBold, sans-serif
   font-weight: normal
   letter-spacing: 4px
   color: #ffffff
   text-shadow: 1px -2px #000, -2px 2px #000, 2px 3px #000
   font-size: 80pt
-  margin: 0
+  margin: 30px 0 10px 0
   padding: 0
+  line-height: 1
 
 .nav
   font-size: 20pt
   margin-right: 30px
   width: 670px
+  margin-bottom: 50px
 
-.nav a
-  color: black
-  text-decoration: none
-  background-color: #fefefe
-  padding: 0 10px
+  a
+    color: black
+    text-decoration: none
+    background-color: #fefefe
+    padding: 0 10px
+    margin-left: 40px
 
-.nav a:hover
-  color: black
-  background-color: #0f0
-  padding: 10px
+  a:hover
+    color: black
+    background-color: #0f0
+    padding: 10px
 
-.nav a.current
-  font-weight: bold
+  a.current
+    font-weight: bold
 
 .inner-frame
   width: 270px
@@ -69,8 +72,8 @@ h1
   padding: 10px
   box-shadow: 1px 1px 3px #ccc
 
-.inner-frame img
-  opacity: 1.0
+  img
+    opacity: 1.0
 
 a:hover .inner-frame
   border: 3px #0f0 solid

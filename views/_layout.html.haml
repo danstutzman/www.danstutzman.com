@@ -16,23 +16,15 @@
 
       %hr.nav-line
       .nav
-        &nbsp;
-        &nbsp;
         %a{href: "/portfolio",
            class: request.path_info == '/portfolio' && 'current'}
           Portfolio
-        &nbsp;
-        &nbsp;
         %a{href: "/blog",
            class: request.path_info == '/blog' && 'current'}
           Blog
-        &nbsp;
-        &nbsp;
         %a{href: "/contact",
            class: request.path_info == '/contact' && 'current'}
           Contact
-        &nbsp;
-        &nbsp;
         %a{href: "/login",
            class: request.path_info == '/login' && 'current'}
           Login
