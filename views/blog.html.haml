@@ -1,6 +1,6 @@
 - last_path = Dir.glob('**/*.html.erb').max
 - result = ERB.new(File.read(last_path)).result(get_binding)
-%h3= @title
+%h2= @title
 %i Published #{@date}
 = result
 
