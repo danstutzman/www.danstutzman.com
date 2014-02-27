@@ -5,48 +5,42 @@
     %meta(name="viewport" content="width=450")
     %title Dan Stutzman
     %link(rel="stylesheet" href="/stylesheets/index.css")
-    %link(href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css")
-    %link(href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css")
-    %link(href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css")
   %body
-    %h1(style='background-color:red')
-      Don't forget to re-enable robots.txt
+    %div(style='width:980px; margin: 0 auto')
+      %h1
+        <span style='letter-spacing:2px'>Da</span>n
+        <span style='letter-spacing:6px'>Stut</span>z<span style='letter-spacing:2px'>man</span>
 
-    .header
-      .top-bar
-        .restricted-width
-          .social
-            %a.facebook(href='http://www.facebook.com/dtstutz')
-            %a.github(href='https://github.com/danielstutzman')
-            %a.googleplus(href='https://plus.google.com/112826277336975923063')
-            %a.linkedin(href='http://www.linkedin.com/pub/daniel-stutzman/9/15b/140')
-            %a.twitter(href='http://twitter.com/#!/danielstutzman')
-            %a.email(href='mailto:dan@danstutzman.com')
-          .top
-            Dan&nbsp;Stutzman
-            .top-cover
+      %hr.nav-line
+      .nav
+        &nbsp;
+        &nbsp;
+        %a{href: "/portfolio",
+           class: request.path_info == '/portfolio' && 'current'}
+          Portfolio
+        &nbsp;
+        &nbsp;
+        %a{href: "/blog",
+           class: request.path_info == '/blog' && 'current'}
+          Blog
+        &nbsp;
+        &nbsp;
+        %a{href: "/contact",
+           class: request.path_info == '/contact' && 'current'}
+          Contact
+        &nbsp;
+        &nbsp;
+        %a{href: "/login",
+           class: request.path_info == '/login' && 'current'}
+          Login
 
-
-    - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
-      .restricted-width
+      - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
         .content
           %h2= @title
           %br
           %i Published #{@date}
           = yield
 
-    - else
-      .nav-background
-        .restricted-width
-          .nav-links
-            - %w[services blog resume].each do |page|
-              - if request.path_info.gsub(/\.html.haml$/, '') == "/#{page}"
-                %h2
-                  %a{href: "/#{page}"}
-                    = page
-              - else
-                %a.other{href: "/#{page}"}
-                  = page
-      .restricted-width
+      - else
         .content
           = yield

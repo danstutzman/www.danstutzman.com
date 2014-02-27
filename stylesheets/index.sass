@@ -3,158 +3,87 @@ html
 
 body
   margin: 0
-  font-family: 'Open Sans', sans-serif
+  font: 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif
+  background-color: #fefefe
 
-.top-bar
-  width: 100%
-  padding: 5px 0
+@font-face
+  font-family: GraublauWebBold
+  src: url('/fonts/GraublauSansWeb/GraublauWebBold.otf') format("opentype")
+
+hr.nav-line
+  width: 670px
+  height: 2pt
   background-color: black
-  color: white
-
-.top
   position: relative
-  font-size: 44pt
-  letter-spacing: 2px
-  font-weight: 300
-  text-shadow: -1px 0 1px #7F0, 1px 0 1px #7F0, 0 -1px 1px #7F0, 0 1px 1px #7F0
-  width: 300px
+  top: 20px
+  z-index: -3
   margin: 0
-
-@media screen and (min-width: 1000px)
-  .top-cover
-    position: absolute
-    left: 0
-    top: 0
-    height: 75px
-    width: 600px
-    background: radial-gradient(rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.5) 100%)
-
-.content
-  margin: 30px 0
-  font-family: 'Open Sans Condensed', 'Arial Narow', sans-serif
-  font-size: 20pt
+  padding: 0
+  border: 0
 
 h1
-  font-size: 32pt
+  font-family: GraublauWebBold
   font-weight: normal
+  letter-spacing: 4px
+  color: #ffffff
+  text-shadow: 1px -2px #000, -2px 2px #000, 2px 3px #000
+  font-size: 80pt
   margin: 0
-  line-height: 1.0
+  padding: 0
 
-.subtitle
-  font-style: italic
-  padding-top: 10px
+.nav
+  font-size: 20pt
+  margin-right: 30px
+  width: 670px
 
-@media screen and (max-width: 999px)
-  .contact-info
-    margin-top: 10px
-    text-align: right
+.nav a
+  color: black
+  text-decoration: none
+  background-color: #fefefe
+  padding: 0 10px
 
-.restricted-width
-  margin: 0 10px
-  @media screen and (min-width: 1000px)
-    width: 970px
-    margin: 0 auto
+.nav a:hover
+  color: black
+  background-color: #0f0
+  padding: 10px
 
-h2
-  display: inline
-
-@media screen and (min-width: 1000px)
-  .title
-    float: left
-    width: 600px
-  .contact-info
-    float: right
-    width: 300px
-    text-align: right
-  h3.resume
-    width: 150px
-    float: left
-    font-weight: normal
-    font-size: 20pt
-    padding-top: 30px
-    margin-top: 0
-  .right
-    padding-top: 30px
-  .top
-    letter-spacing: 10px
-  .nav-links a
-    padding: 0 10px
-
-h3.resume
-  margin-bottom: 0
-
-@media screen and (min-width: 1000px)
-  .right
-    margin-left: 150px
-
-.right p
-  margin: 0
-
-.right a
+.nav a.current
   font-weight: bold
 
-ul
-  margin-top: 0
-  margin-bottom: 0
-  padding-left: 20px
+.inner-frame
+  width: 270px
+  height: 200px
+  border: 3px #000 solid
+  padding: 10px
+  box-shadow: 1px 1px 3px #ccc
 
-a
-  text-decoration: none
-  color: #008
+.inner-frame img
+  opacity: 1.0
 
-.entry
-  padding-bottom: 20px
+a:hover .inner-frame
+  border: 3px #0f0 solid
 
-.nav-links a.other
-  opacity: 0.2
+a img.onhover
+  display: none
+a:hover img.onhover
+  display: block
+a img.offhover
+  display: block
+a:hover img.offhover
+  display: none
 
-.nav-background
-  background-color: #460
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 1.0)
-  margin-bottom: 1px
-  height: 43px
-  width: 100%
-  padding: 5px 0
-  line-height: 1.2
+.caption
+  font-size: 16pt
+  text-align: center
+  color: #aaa
+  width: 296px
+  background-color: #555
+  color: white
+  box-shadow: 1px 1px 3px #ccc
 
-.nav-links a
-  color: transparent
-  text-shadow: 0px -1px 1px rgba(255,255,255,1.0)
-  -webkit-background-clip: text
-  -moz-background-clip: text
-  background-clip: text
-  height: 35px
-  font-size: 28pt
-  font-weight: 800
-  display: inline-block
-  padding: 0 5px
+a:hover .caption
+  background-color: #0f0
 
-@media screen and (max-width: 999px)
-  pre
-    font-size: 9pt
-    width: 100%
-    overflow: scroll
-
-.social
-  float: right
-  padding-top: 20px
-  a
-    display: inline-block
-    width: 23px
-    height: 24px
-    background: url('/images/social_icons.png')
-    margin-left: 5px
-  a.facebook
-    background-position: 0 -34px
-  a.email
-    background-position: 0 -102px
-  a.github
-    background-position: 0 -170px
-  a.googleplus
-    background-position: 0 -236px
-  a.googleplus
-    background-position: 0 -236px
-  a.linkedin
-    background-position: 0 -305px
-  a.twitter
-    background-position: 0 -374px
+.quote
+  line-height: 1.5
+  font-style: italic
