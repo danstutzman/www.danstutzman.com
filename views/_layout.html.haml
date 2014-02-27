@@ -6,10 +6,17 @@
     %title Dan Stutzman
     %link(rel="stylesheet" href="/stylesheets/index.css")
   %body
-    .sidebar
-      = yield :sidebar
+    %div(style='width:1020px; margin: 0 auto')
+      .sidebar
+        .motto
+          freelance web
+          %br
+          developer in
+          %br
+          Boulder, CO
+        %br
+        = yield :sidebar
 
-    %div(style='width:980px; margin: 0 auto')
       %h1
         <span style='letter-spacing:2px'>Da</span>n
         <span style='letter-spacing:6px'>Stut</span>z<span style='letter-spacing:2px'>man</span>
