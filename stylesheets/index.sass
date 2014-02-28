@@ -13,7 +13,7 @@ body
   src: url('/fonts/GraublauSansWeb/GraublauWebBold.otf') format("opentype")
 
 hr.nav-line
-  width: 670px
+  width: 645px
   height: 2px
   background-color: black
   position: relative
@@ -32,23 +32,28 @@ hr.nav-line
   padding: 30px 30px 0 30px
   right: 100px
 
+  .motto
+    font-size: 26pt
+    margin-top: 10px
+    text-align: center
+    letter-spacing: 2px
+    height: 150px
+
+  .quote
+    line-height: 1.5
+    font-style: italic
+    margin-bottom: 30px
+
 h1
   font-family: GraublauWebBold, sans-serif
   font-weight: normal
   letter-spacing: 4px
   color: #ffffff
   text-shadow: 1px -2px #000, -2px 2px #000, 2px 3px #000
-  font-size: 80pt
+  font-size: 77pt
   margin: 0 0 10px 0
   padding: 20px 0 0 0
   line-height: 1
-
-.motto
-  font-size: 26pt
-  margin-top: 10px
-  text-align: center
-  letter-spacing: 2px
-  height: 150px
 
 .nav
   font-size: 20pt
@@ -71,44 +76,34 @@ h1
   a.current
     font-weight: bold
 
-.inner-frame
-  width: 270px
-  height: 200px
-  border: 3px #000 solid
-  padding: 10px
-  box-shadow: 1px 1px 3px #ccc
+.project
+  width: 350px
+  float: left
+  margin-bottom: 50px
 
-  img
-    opacity: 1.0
+  .caption
+    font-size: 16pt
+    text-align: center
+    color: #aaa
+    width: 296px
+    background-color: #555
+    color: white
+    box-shadow: 1px 1px 3px #ccc
+
+  .inner-frame
+    width: 282px
+    height: 200px
+    border: 7px #555 solid
+    box-shadow: 1px 1px 3px #ccc
+
+    img
+      opacity: 1.0
 
 a:hover .inner-frame
-  border: 3px #00f solid
-
-a img.onhover
-  display: none
-a:hover img.onhover
-  display: block
-a img.offhover
-  display: block
-a:hover img.offhover
-  display: none
-
-.caption
-  font-size: 16pt
-  text-align: center
-  color: #aaa
-  width: 296px
-  background-color: #555
-  color: white
-  box-shadow: 1px 1px 3px #ccc
+  border: 7px #00f solid
 
 a:hover .caption
   background-color: #00f
-
-.quote
-  line-height: 1.5
-  font-style: italic
-  margin-bottom: 30px
 
 h2
   font-family: GraublauWebBold, sans-serif
