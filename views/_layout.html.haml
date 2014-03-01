@@ -24,10 +24,10 @@
       %hr.nav-line
       .nav
         %a{href: "/portfolio",
-           class: request.path_info == '/portfolio' && 'current'}
+           class: request.path_info.starts_with?('/portfolio') && 'current'}
           Portfolio
         %a{href: "/blog",
-           class: request.path_info == '/blog' && 'current'}
+           class: request.path_info.starts_with?('/blog') && 'current'}
           Blog
         %a{href: "/contact",
            class: request.path_info == '/contact' && 'current'}
