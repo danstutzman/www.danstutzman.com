@@ -1,0 +1,10 @@
+- old_title, old_date, old_tags = @title, @date, @tags
+- Dir.glob('views/20*').sort.reverse.each do |dir|
+  - year = dir.split('/')[1]
+  %h3 Posts from #{year}
+  - Dir.glob("views/#{year}/**/*.html.erb").sort.reverse.each do |path|
+    - ERB.new(File.read(path)).result(get_binding) # ignore it
+    %li
+      %a{href: path.gsub(/^views/, '').gsub(/.html.erb$/, '')}
+        = @title
+- @title, @date, @tags = old_title, old_date, old_tags

@@ -5,8 +5,16 @@ html
 body
   margin: 0
   padding: 0
-  font: 14px Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, 'Liberation Sans', FreeSans, sans-serif
+  font: 18px Helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, 'Liberation Sans', FreeSans, sans-serif
   background-color: #fefefe
+
+a
+  color: black
+  font-weight: bold
+  text-decoration: none
+
+  &:hover
+    color: blue
 
 @font-face
   font-family: GraublauWebBold
@@ -43,6 +51,22 @@ hr.nav-line
     font-style: italic
     margin-bottom: 30px
 
+  ul
+    margin: 30px 0 10px 0
+
+  li
+    line-height: 1
+    margin-bottom: 10px
+    list-style-type: none
+
+    a
+      color: black
+      text-decoration: none
+      font-weight: normal
+
+      &:hover
+        color: blue
+
 h1
   font-family: GraublauWebBold, sans-serif
   font-weight: normal
@@ -66,6 +90,7 @@ h1
     background-color: #fefefe
     padding: 0 10px
     margin-left: 40px
+    font-weight: normal
 
   a:hover
     background-color: #00f
@@ -130,3 +155,7 @@ dl
 
     ul
       margin: 0
+
+.content
+  h2
+    margin: 0

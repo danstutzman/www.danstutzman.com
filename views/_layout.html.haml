@@ -7,6 +7,10 @@
     %link(rel="stylesheet" href="/stylesheets/index.css")
   %body
     %div(style='width:1020px; margin: 0 auto')
+      - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
+        - content_for :sidebar do
+          = render '/blog_sidebar'
+
       .sidebar
         .motto
           freelance web
@@ -37,11 +41,12 @@
           Login
 
       - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
-        .content
-          %h2= @title
-          %br
-          %i Published #{@date}
-          = yield
+        %div(style='width:650px; overflow: scroll')
+          .content
+            %h2= @title
+            = yield
+            %br
+            %i Posted #{@date}
 
       - else
         .content
