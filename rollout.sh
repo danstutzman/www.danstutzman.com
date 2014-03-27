@@ -1,3 +1,3 @@
 #!/bin/bash
 serve export . output
-rsync -rv output/ dstutzman_danstutzman@ssh.phx.nearlyfreespeech.net:/home/public
+rsync -rv --delete output/ dstutzman_danstutzman@ssh.phx.nearlyfreespeech.net:/home/public
