@@ -1,0 +1,28 @@
+<%
+  @title = 'Speed up Docker on EC2'
+  @date = Date.parse('2014-07-29')
+%>
+
+<p>I noticed that my Docker server was dramatically slower on an EC2 server than on a comparable server hosted on DigitalOcean.  Slow, as in: 5 seconds to complete a trivial <code>Dockerfile</code> step instead of 0.1 seconds.  Why?</p>
+
+<p>An IRC user named <i>deltab</i> helpfully suggested to check which storage backend I was using.  Sure enough, running <code>docker info</code> showed <code>Storage Driver: devicemapper</code> on the slow server and <code>Storage Driver: aufs</code> on the fast server.</p>
+
+<p>A <a href="https://groups.google.com/forum/#!topic/docker-user/E9xZWANIlco">forum post by Robin Speekenbrink</a> suggested that running the official Docker install script at <a href="https://get.docker.io/">get.docker.io</a> could make Docker faster on AWS.  Turns out he was right, thanks to this little excerpt:</p>
+
+<pre>
+# aufs is preferred over devicemapper; try to ensure the driver is available.
+if ! grep -q aufs /proc/filesystems && ! $sh_c 'modprobe aufs'; then
+  kern_extras="linux-image-extra-$(uname -r)"
+
+  apt_get_update
+  ( set -x; $sh_c 'sleep 3; apt-get install -y -q '"$kern_extras" ) || true
+
+  if ! grep -q aufs /proc/filesystems && ! $sh_c 'modprobe aufs'; then
+    echo >&2 'Warning: tried to install '"$kern_extras"' (for AUFS)'
+    echo >&2 ' but we still have no AUFS.  Docker may not work. Proceeding anyways!'
+    ( set -x; sleep 10 )
+  fi
+fi
+</pre>
+
+<p><b>TL;DR</b> If Docker is slow on EC2 and <code>docker info</code> returns <code>Storage Driver: devicemapper</code>, try running <code>apt-get install -y -q linux-image-extra-$(uname -r)</code>.  Afterwards you might have to restart Docker and recreate all your containers.</p>
