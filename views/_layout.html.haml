@@ -7,7 +7,7 @@
     %link(rel="stylesheet" href="/stylesheets/index.css")
   %body
     %div(style='width:1020px; margin: 0 auto')
-      - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
+      - if request.path_info.match(/^(\/20[0-9][0-9]\/|\/blog)/) # blog post
         - content_for :sidebar do
           = render '/blog_sidebar'
 
@@ -38,13 +38,12 @@
            class: request.path_info == '/login' && 'current'}
           Login
 
-      - if request.path_info.match(/\/20[0-9][0-9]\//) # blog post
+      - if request.path_info.match(/^(\/20[0-9][0-9]\/|\/blog)/) # blog post
         %div(style='width:650px; overflow: scroll')
           .content
             %h2= @title
+            %i Published #{@date}
             = yield
-            %br
-            %i Posted #{@date}
 
           - path = request.path_info.gsub('/blog', '').gsub(/\.html$/, '').gsub(/\.html\.erb$/, '')
           %script
