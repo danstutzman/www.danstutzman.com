@@ -65,4 +65,5 @@
         .content
           = yield
 
-    %script(src='/javascripts/instantclick.min.js')
+    %script(src='/javascripts/instantclick.min.js' data-no-instant)
+    %script(data-no-instant) InstantClick.init()
