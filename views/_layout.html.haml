@@ -45,22 +45,6 @@
             %i Published #{@date}
             = yield
 
-          - path = request.path_info.gsub('/blog', '').gsub(/\.html$/, '').gsub(/\.html\.erb$/, '')
-          %script
-            = "var disqus_identifier = '#{path}2'; // add 2 to fix Disqus bug"
-            = "var disqus_shortname = 'danielstutzman';"
-            = "var disqus_url = 'http://www.danstutzman.com#{path}';"
-          #disqus_thread
-          :javascript
-            if (document.location.host !== 'localhost:9292') {
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-            }
-
       - else
         .content
           = yield
