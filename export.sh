@@ -1,2 +1,2 @@
 #!/bin/bash -x
-serve export . output
+bundle exec serve export . output

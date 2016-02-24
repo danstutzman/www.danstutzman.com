@@ -1,3 +1,3 @@
 #!/bin/bash
-serve export . output
-bitballoon deploy output
+bundle exec serve export . output
+bundle exec bitballoon deploy output
