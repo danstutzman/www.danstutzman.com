@@ -31,12 +31,12 @@
         %a{href: "/blog",
            class: request.path_info.starts_with?('/blog') && 'current'}
           Blog
+        %a{href: "/resume",
+           class: request.path_info.starts_with?('/resume') && 'current'}
+          Resume
         %a{href: "/contact",
            class: request.path_info == '/contact' && 'current'}
           Contact
-        %a{href: "/login",
-           class: request.path_info == '/login' && 'current'}
-          Login
 
       - if request.path_info.match(/^(\/20[0-9][0-9]\/|\/blog)/) # blog post
         %div(style='width:650px; overflow: scroll')
