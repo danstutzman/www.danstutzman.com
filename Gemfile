@@ -12,5 +12,3 @@ gem 'haml'
 
 # Use mongrel for the Web server
 #gem 'mongrel'
-
-gem 'bitballoon', '0.2.6'
