@@ -25,17 +25,17 @@
 
       %hr.nav-line
       .nav
-        %a{href: "/portfolio",
-           class: request.path_info.starts_with?('/portfolio') && 'current'}
+        %a{href: "/portfolio.html",
+           class: request.path_info.starts_with?('/portfolio.html') && 'current'}
           Portfolio
-        %a{href: "/blog",
-           class: request.path_info.starts_with?('/blog') && 'current'}
+        %a{href: "/blog.html",
+           class: request.path_info.starts_with?('/blog.html') && 'current'}
           Blog
-        %a{href: "/resume",
-           class: request.path_info.starts_with?('/resume') && 'current'}
+        %a{href: "/resume.html",
+           class: request.path_info.starts_with?('/resume.html') && 'current'}
           Resume
-        %a{href: "/contact",
-           class: request.path_info == '/contact' && 'current'}
+        %a{href: "/contact.html",
+           class: request.path_info == '/contact.html' && 'current'}
           Contact
 
       - if request.path_info.match(/^(\/20[0-9][0-9]\/|\/blog)/) # blog post

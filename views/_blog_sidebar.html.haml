@@ -5,6 +5,6 @@
   - Dir.glob("views/#{year}/**/*.html.erb").sort.reverse.each do |path|
     - ERB.new(File.read(path)).result(get_binding) # ignore it
     %li
-      %a{href: path.gsub(/^views/, '').gsub(/.html.erb$/, '')}
+      %a{href: path.gsub(/^views/, '').gsub(/.erb$/, '')}
         = @title
 - @title, @date, @tags = old_title, old_date, old_tags
